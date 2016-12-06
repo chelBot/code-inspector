@@ -1,0 +1,52 @@
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  color: 141414;
+  background-color: #141414;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background-color: #141414;
+  border: 1px orange solid;
+  color: orange;
+}
+
+.btn-primary:hover {
+  background-color: orange;
+  color: black;
+}
+
+.btn-primary:focus, .btn-primary:active{
+  background-color: #141414;
+  border: 1px yellow solid;
+  color: yellow;
+}
+
+.row {
+  margin-top: 20px;
+  margin-left: 80px;
+}
+
+.button-group {
+  margin-bottom: 20px;
+}
+
+h1{
+  text-align: center;
+  color: orange;
+}
+
+#output {
+  height: 300px;
+}
+
+#editor {
+    margin: 0;
+    position: absolute;
+    top: 150px;
+    bottom: 0;
+    left: 0;
+    right: 500px;
+    font-size: 20px;
+}

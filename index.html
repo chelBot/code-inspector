@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Editor</title>
+  <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp2/css/bootstrap.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container row">
+    <div class="col-sm-4">
+      <form>
+        <div class="form-group">
+          <textarea class="form-control status-box" id="white-list" rows="2" placeholder="Submit a list of tokens to whitelist. i.e: for, if, var"></textarea>
+        </div>
+      </form>
+      <div class="button-group pull-right">
+        <a href="#" class="btn btn-primary" id="white-btn">Run Test</a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <form>
+        <div class="form-group">
+          <textarea class="form-control status-box" id="black-list" rows="2" placeholder="Submit a list of tokens to blacklist. i.e: for, if, var"></textarea>
+        </div>
+      </form>
+      <div class="button-group pull-right">
+        <a href="#" class="btn btn-primary" id="black-btn">Run Test</a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <form>
+        <div class="form-group">
+          <textarea class="form-control status-box" id="structure-list" rows="2" placeholder="Submit a list of nested node types. i.e: ForStatement, IfStatement, VariableDeclaration"></textarea>
+        </div>
+      </form>
+      <div class="button-group pull-right">
+        <a href="#" class="btn btn-primary" id="structure-btn">Run Test</a>
+      </div>
+    </div>
+  </div>
+  <pre id="editor" class="ace_editor ace-twilight ace_dark">
+  function foo(items) {
+      // Sample Ace editor input
+      var i;
+      for (i = 0; i &lt; items.length; i++) {
+          alert("Codecademy  Rocks! " + items[i]);
+          if(true){
+            var kissUp = "Hi Max!";
+            console.log(kissUp);
+          }
+      }
+  }
+  </pre>
+  <div class="col-sm-3 pull-right">
+    <h1>Output</h1>
+    <form>
+      <div class="form-group">
+        <textarea class="form-control status-box" id="whitelist-results" rows="4" placeholder="Results of this whitelist test..."></textarea>
+      </div>
+    </form>
+    <form>
+      <div class="form-group">
+        <textarea class="form-control status-box" id="blacklist-results" rows="4" placeholder="Results of this blacklist test..."></textarea>
+      </div>
+    </form>
+    <form>
+      <div class="form-group">
+        <textarea class="form-control status-box" id="structure-results" rows="4" placeholder="Results of this structural test..."></textarea>
+      </div>
+    </form>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="esprima.js"></script>
+  <script src="estraverse.browser.js"></script>
+  <script src="app.js" type="text/javascript" charset="utf-8"></script>
+
+
+</body>
+</html>
